@@ -9,7 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            MovieListView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "tv")
+                        Text("Movies")
+                    }
+                }
+                .tag(0)
+            
+            Text("asdf")
+                .tabItem {
+                    VStack {
+                        Image(systemName: "magnifyingglass")
+                        Text("Other")
+                    }
+                }
+                .tag(1)
+        }
     }
 }
 
